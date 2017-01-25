@@ -1,0 +1,20 @@
+### Exercise 7
+* List all possible domain name values for ```ElectronicMail``` (email@```domain.name```)
+
+select distinct substring_index(content, '@', -1) as 'domains' from  ElectronicMail group by domains limit 10;
+
++-----------------+
+| domains         |
++-----------------+
+| a.ca            |
+| a.co.uk         |
+| a.com           |
+| a.edu           |
+| a.net           |
+| aaliquet.com    |
+| aaliquetvel.edu |
+| aarcuSed.org    |
+| ac.co.uk        |
+| ac.com          |
++-----------------+
+etc...
