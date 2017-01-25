@@ -1,0 +1,30 @@
+describe Address;
++--------------+-----------------------------+------+-----+---------+----------------+
+| Field        | Type                        | Null | Key | Default | Extra          |
++--------------+-----------------------------+------+-----+---------+----------------+
+| id           | int(11)                     | NO   | PRI | NULL    | auto_increment |
+| entryId      | int(11)                     | YES  |     | NULL    |                |
+| type         | enum('home','work','other') | YES  |     | NULL    |                |
+| addressLine1 | varchar(255)                | YES  |     | NULL    |                |
+| addressLine2 | varchar(255)                | YES  |     | NULL    |                |
+| city         | varchar(255)                | YES  |     | NULL    |                |
+| province     | varchar(128)                | YES  |     | NULL    |                |
+| country      | varchar(128)                | YES  |     | NULL    |                |
+| postalCode   | varchar(10)                 | YES  |     | NULL    |                |
++--------------+-----------------------------+------+-----+---------+----------------+
+
+select count(*) as 'Total' , lower(country) as 'Country' from Address group by country order by count(*) desc;                                                                              
++-------+----------------------------------------------+
+| Total | Country                                      |
++-------+----------------------------------------------+
+|    18 | mozambique                                   |
+|    16 | saint helena, ascension and tristan da cunha |
+|    15 | curaçao                                      |
+|    15 | thailand                                     |
+|    15 | united states minor outlying islands         |
+|    15 | andorra                                      |
+|    15 | canada                                       |
+|    15 | argentina                                    |
+|    15 | lebanon                                      |
+|    15 | wallis and futuna                            |
+etc...
