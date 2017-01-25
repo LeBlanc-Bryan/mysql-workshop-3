@@ -1,0 +1,17 @@
+select distinct city from Address where country = ('Canada' or 'Austria' or 'Isle of Man' or 'Ireland' or 'Japan') group by city;
+
+1295 rows in set...
++------------------+
+| city             |
++------------------+
+| ?anl?urfa        |
+| ?ereflikoçhisar  |
+| ?negöl           |
+| ?ód?             |
+| ?om?a            |
+| ?skenderun       |
+| ?slahiye         |
+| A Coruña         |
+| Abbeville        |
+| Abbotsford       |
+etc...
