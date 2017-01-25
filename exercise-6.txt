@@ -1,0 +1,7 @@
+select Phone.content from Entry join Phone on Entry.id = Phone.entryId where(firstName = 'Charlotte' and lastName = 'Jenkins');                                                              
++----------------+
+| content        |
++----------------+
+| (110) 167-3420 |
+| (605) 175-1334 |
++----------------+
