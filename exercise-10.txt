@@ -1,0 +1,1 @@
+select case type when 'work' then 'home' when 'home' then 'work' end as type from ElectronicMail;
